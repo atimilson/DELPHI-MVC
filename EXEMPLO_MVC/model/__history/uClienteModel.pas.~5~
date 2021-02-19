@@ -1,0 +1,16 @@
+unit uClienteModel;
+
+interface
+
+uses uEnumerados;
+type
+   TClienteModel = Class
+
+   public
+      property Codigo:Integer;
+      property Nome : String;
+      property Acao : TAcao;
+   End;
+implementation
+
+end.

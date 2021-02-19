@@ -1,0 +1,34 @@
+unit uEmpresaDAO;
+
+interface
+
+uses
+   uEmpresaModel,FireDAC.Comp.Client, uSistemaControl,System.SysUtils;
+type
+   TEmpresaDao = class
+
+   procedure carregar(AEmpresaModel:TEmpresaModel,ACodigo:Integer);
+   end;
+implementation
+
+{ TEmpresaDao }
+
+procedure TEmpresaDao.carregar(AEmpresaModel: TEmpresaModel);
+var
+  VQuery: TFDQuery;
+begin
+   VQuery := TSistemaControl.GetInstance().Conexao.CriarQuery;
+   try
+      VQuery.Open('SELECT CODIGO,RSOCIAL FROM EMPRESA');
+      try
+         AEmpresaModel.Codigo := VQuery.FieldByName('CODIGO').AsInteger;
+         AEmpresamodel.RSocial := VQuery.FieldByName('RSOCIAL').AsString;
+      finally
+         VQuery.Close;
+      end;
+   finally
+      FreeAndNil(VQuery);
+   end;
+end;
+
+end.

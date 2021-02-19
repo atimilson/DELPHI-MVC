@@ -1,0 +1,18 @@
+program ExemploMVC;
+
+uses
+  Vcl.Forms,
+  FrmPrincipalView in 'view\FrmPrincipalView.pas' {Form2},
+  UConexao in 'dao\UConexao.pas',
+  uSistemaControl in 'controller\uSistemaControl.pas',
+  uEmpresaModel in 'model\uEmpresaModel.pas',
+  uEmpresaDAO in 'dao\uEmpresaDAO.pas';
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TForm2, Form2);
+  Application.Run;
+end.

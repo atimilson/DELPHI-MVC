@@ -1,0 +1,71 @@
+object Form2: TForm2
+  Left = 0
+  Top = 0
+  Caption = 'Exemplo MVC'
+  ClientHeight = 626
+  ClientWidth = 1066
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  PixelsPerInch = 96
+  TextHeight = 13
+  object StatusBar1: TStatusBar
+    Left = 0
+    Top = 563
+    Width = 1066
+    Height = 63
+    Panels = <
+      item
+        Width = 500
+      end
+      item
+        Width = 50
+      end>
+    ExplicitTop = 512
+    ExplicitWidth = 1002
+  end
+  object Panel1: TPanel
+    Left = 0
+    Top = 0
+    Width = 161
+    Height = 563
+    Align = alLeft
+    TabOrder = 1
+    object Panel3: TPanel
+      Left = 1
+      Top = 1
+      Width = 159
+      Height = 41
+      Align = alTop
+      Caption = 'Home'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -16
+      Font.Name = 'Futura Md BT'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 0
+      ExplicitLeft = -8
+      ExplicitTop = 264
+      ExplicitWidth = 185
+    end
+  end
+  object Panel2: TPanel
+    Left = 161
+    Top = 0
+    Width = 905
+    Height = 563
+    Align = alClient
+    Caption = 'Panel1'
+    TabOrder = 2
+    ExplicitLeft = 8
+    ExplicitTop = 8
+    ExplicitWidth = 161
+  end
+end

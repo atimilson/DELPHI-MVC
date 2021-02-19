@@ -1,0 +1,50 @@
+unit uEmpresaModel;
+
+interface
+uses
+   System.SysUtils;
+type
+   TEmpresaModel = class
+   private
+      FCodigo: Integer;
+      FRSocial: String;
+
+      procedure SetCodigo(const Value: Integer);
+      procedure SetRSocial(const Value: String);
+
+   public
+      procedure Carregar(ACodigo: integer);
+
+      property Codigo: Integer read FCodigo write SetCodigo;
+      property RSocial: String read FRSocial write SetRSocial;
+   end;
+implementation
+
+{ TEmpresa }
+
+uses uEmpresaDAO;
+
+
+procedure TEmpresaModel.Carregar(ACodigo: integer);
+var
+   VEmpresaDAO : TEmpresaDAO;
+begin
+   VEmpresaDAO := TEmpresaDao.Create;
+   try
+      VEmpresaDAO.carregar(Self,ACodigo);
+   finally
+      FreeAndNil(VEmpresaDAO);
+   end;
+end;
+
+procedure TEmpresaModel.SetCodigo(const Value: Integer);
+begin
+  FCodigo := Value;
+end;
+
+procedure TEmpresaModel.SetRSocial(const Value: String);
+begin
+  FRSocial := Value;
+end;
+
+end.

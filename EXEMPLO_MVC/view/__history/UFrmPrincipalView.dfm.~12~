@@ -1,0 +1,137 @@
+object frmPrincipal: TfrmPrincipal
+  Left = 0
+  Top = 0
+  Caption = 'Exemplo MVC'
+  ClientHeight = 546
+  ClientWidth = 1059
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poMainFormCenter
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  PixelsPerInch = 96
+  TextHeight = 13
+  object StatusBar1: TStatusBar
+    Left = 0
+    Top = 483
+    Width = 1059
+    Height = 63
+    Panels = <
+      item
+        Width = 500
+      end
+      item
+        Width = 50
+      end>
+    ExplicitTop = 512
+    ExplicitWidth = 1002
+  end
+  object Panel1: TPanel
+    Left = 0
+    Top = 0
+    Width = 161
+    Height = 483
+    Align = alLeft
+    TabOrder = 1
+    ExplicitHeight = 563
+    object Panel4: TPanel
+      Left = 1
+      Top = 82
+      Width = 159
+      Height = 5
+      Align = alTop
+      Color = clGray
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -16
+      Font.Name = 'Futura Md BT'
+      Font.Style = [fsBold]
+      ParentBackground = False
+      ParentFont = False
+      TabOrder = 0
+    end
+    object Panel5: TPanel
+      Left = 1
+      Top = 87
+      Width = 159
+      Height = 41
+      Cursor = crHandPoint
+      Align = alTop
+      Caption = 'Cliente'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -16
+      Font.Name = 'Futura Md BT'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 1
+      OnClick = Panel5Click
+      ExplicitLeft = -8
+      ExplicitTop = 264
+      ExplicitWidth = 185
+    end
+    object Panel6: TPanel
+      Left = 1
+      Top = 41
+      Width = 159
+      Height = 41
+      Cursor = crHandPoint
+      Align = alTop
+      Caption = 'Home'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -16
+      Font.Name = 'Futura Md BT'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 2
+      ExplicitTop = 1
+      ExplicitWidth = 157
+    end
+    object Panel3: TPanel
+      Left = 1
+      Top = 1
+      Width = 159
+      Height = 40
+      Align = alTop
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -16
+      Font.Name = 'Futura Md BT'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 3
+    end
+  end
+  object PnlFundo: TPanel
+    Left = 161
+    Top = 0
+    Width = 898
+    Height = 483
+    Align = alClient
+    Caption = 'Fundo'
+    Color = clWhite
+    ParentBackground = False
+    TabOrder = 2
+    ExplicitLeft = 8
+    ExplicitTop = 8
+    ExplicitWidth = 161
+    ExplicitHeight = 563
+    object Panel2: TPanel
+      Left = 1
+      Top = 1
+      Width = 896
+      Height = 40
+      Align = alTop
+      Caption = 'FUNCIONALIDADE ABERTA ABAIXO'
+      Color = clAppWorkSpace
+      ParentBackground = False
+      TabOrder = 0
+    end
+  end
+end
